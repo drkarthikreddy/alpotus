@@ -107,26 +107,12 @@ function initAlpotus() {
     }, 2000);
 }
 
-function renderUI(isPWA) {
-    // Navbar is persistent on both layouts
+function renderUI() {
+    // Always load the same 3 components for both Web and PWA
     document.body.insertAdjacentHTML('afterbegin', ui.navbar);
-    
-    if (isPWA) {
-        // --- APP LAYOUT (PWA Mode) ---
-        document.body.insertAdjacentHTML('beforeend', ui.bottomNav);
-        
-        // Active Tab Highlighting
-        const path = window.location.pathname;
-        const tabs = document.querySelectorAll('.nav-tab');
-        tabs.forEach(tab => {
-            const href = tab.getAttribute('href').replace(/\.\.\//g, '');
-            if (path.includes(href)) tab.classList.add('active');
-        });
-    } else {
-        // --- WEBSITE LAYOUT (Browser Mode) ---
-        document.body.insertAdjacentHTML('afterbegin', ui.sidebar);
-        document.body.insertAdjacentHTML('beforeend', ui.footer);
-    }
+    document.body.insertAdjacentHTML('afterbegin', ui.sidebar);
+    document.body.insertAdjacentHTML('beforeend', ui.footer);
+
 }
 
 // 4. UI INTERACTIONS
