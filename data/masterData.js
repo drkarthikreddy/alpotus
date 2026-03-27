@@ -10,16 +10,15 @@ const AlpotusData = {
         title: "Web Tools",
         icon: "🛠️",
         items: [
-            { id: "ppt-gen", name: "PPT Generator", desc: "Create professional PowerPoint presentations instantly.", icon: "📊", category: "Tools", path: "content/tools/ppt-generator/index.html", date: "2024-05-25" },
-            { id: "csv-flash", name: "CSV to Flashcards", desc: "Convert CSV data into study-ready flashcards.", icon: "🗃️", category: "Tools", path: "content/tools/csv-generator/index.html", date: "2024-05-25" },
-            { id: "md-notes", name: "Markdown Notes", desc: "Distraction-free markdown note-taking tool.", icon: "📝", category: "Tools", path: "content/tools/markdown-notes/index.html", date: "2024-05-24" },
+            { id: "ppt-gen", name: "PPT Generator", desc: "Create professional PowerPoint presentations instantly.", icon: "📊", category: "Tools", path: "content/tools/ppt/index.html", date: "2024-05-25" },
+            { id: "csv-flash", name: "Flashcards Generator", desc: "Convert CSV data into study-ready flashcards.", icon: "🗃️", category: "Tools", path: "content/tools/flashcard/index.html", date: "2024-05-25" },
             { id: "notes-ai", name: "Notes AI", desc: "AI-powered clinical and general note summarizer.", icon: "🤖", category: "Tools", path: "content/tools/notes/index.html", date: "2024-05-23" },
-            { id: "form-fill", name: "Auto Form Filler", desc: "Streamline repetitive medical form entry tasks.", icon: "✍️", category: "Tools", path: "content/tools/forms-fill/index.html", date: "2024-05-22" },
+            { id: "image converter", name: "Image converter", desc: "convert png to jpg or jpg to png ", icon: "⚒️", category: "Tools", path: "content/tools/img-converter/index.html", date: "2024-05-22" },
             { id: "invoice-gen", name: "Invoice Generator", desc: "Create professional invoices for medical consultations.", icon: "🧾", category: "Tools", path: "content/tools/invoice-generator/index.html", date: "2024-05-21" },
             { id: "habit-track", name: "Habit Tracker", desc: "Visual progress tracker for healthy lifestyle habits.", icon: "📅", category: "Tools", path: "content/tools/habit-tracker/index.html", date: "2024-05-20" },
-            { id: "study-track", name: "Study Timer", desc: "Advanced study tracker with goal setting.", icon: "🎓", category: "Tools", path: "content/tools/study-tracker/index.html", date: "2024-05-19" },
-            { id: "img-resize", name: "Image Resizer", desc: "Compress and resize images for research papers.", icon: "🖼️", category: "Tools", path: "content/tools/image-resizer/index.html", date: "2024-05-18" },
-            { id: "pomodoro", name: "Pomodoro Timer", desc: "Focus booster using the Pomodoro technique.", icon: "🍅", category: "Tools", path: "content/toolsimg/pomodoro/index.html", date: "2024-05-17" }
+            { id: "image-resizer", name: "Image Resizer", desc: "Compress and resize images for research papers. ", icon: "🎓", category: "Tools", path: "content/tools/study-tracker/index.html", date: "2024-05-19" },
+            { id: "prescription", name: "Prescription Generator", desc: "Generate online prescription for free", icon: "💊", category: "Tools", path: "content/tools/prescription/index.html", date: "2024-05-18" },
+            { id: "flowcharts", name: "Generate Flowcharts", desc: "Generate beautiful flowcharts for free", icon: "🏫", category: "Tools", path: "content/toolsimg/flowcharts/index.html", date: "2024-05-17" }
         ]
     },
 
@@ -32,8 +31,7 @@ const AlpotusData = {
             { id: "age-calc", name: "Age Calculator", desc: "Precise age calculation in years, months, days.", icon: "📅", category: "Calculators", path: "content/calculators/age/index.html", date: "2024-05-24" },
             { id: "water-intake", name: "Water Intake", desc: "Daily hydration requirement based on weight.", icon: "💧", category: "Calculators", path: "content/calculators/water/index.html", date: "2024-05-23" },
             { id: "full-body-anthro", name: "Anthro Analyzer", desc: "Full body anthropometry & muscle symmetry.", icon: "🧍", category: "Calculators", path: "content/calculators/full body/index.html", date: "2024-05-22" },
-            { id: "bmr-calc", name: "BMR Calculator", desc: "Basal Metabolic Rate using Mifflin-St Jeor.", icon: "🔥", category: "Calculators", path: "content/calculators/bmr/index.html", date: "2024-05-21" },
-            { id: "ovulation", name: "Ovulation Tracker", desc: "Calculate most fertile days and ovulation cycle.", icon: "🥚", category: "Calculators", path: "content/calculators/ovulation/index.html", date: "2024-05-20" },
+                { id: "ovulation", name: "Ovulation Tracker", desc: "Calculate most fertile days and ovulation cycle.", icon: "🥚", category: "Calculators", path: "content/calculators/ovulation/index.html", date: "2024-05-20" },
             { id: "edd-calc", name: "Pregnancy Delivery", desc: "Expected Date of Delivery (EDD) calculator.", icon: "🤰", category: "Calculators", path: "content/calculators/pregnancy/index.html", date: "2024-05-19" },
             { id: "crcl-calc", name: "Creatine Clearance", desc: "Estimate GFR using Cockcroft-Gault formula.", icon: "🧪", category: "Calculators", path: "content/calculators/creatinine/index.html", date: "2024-05-18" },
             { id: "anion-gap", name: "Anion Gap", desc: "Calculate serum anion gap for acid-base status.", icon: "📉", category: "Calculators", path: "content/calculators/anion-gap/index.html", date: "2024-05-17" },
@@ -84,14 +82,14 @@ const AlpotusData = {
         title: "Articles",
         icon: "📑",
         items: [
-            { id: "ors-use", name: "How to use ORS", desc: "Proper preparation and clinical use of Oral Rehydration.", icon: "🥤", category: "Articles", path: "content/articles/ors/index.html", date: "2024-05-25" },
-            { id: "flashcard-guide", name: "Making Flashcards", desc: "The science of active recall and flashcard design.", icon: "🗂️", category: "Articles", path: "content/articles/flashcards/index.html", date: "2024-05-24" },
-            { id: "digital-notes", name: "Digital Note Taking", desc: "Workflow for medical students using Notion/iPad.", icon: "💻", category: "Articles", path: "content/articles/notes-guide/index.html", date: "2024-05-23" },
-            { id: "history-taking", name: "History Taking", desc: "Systematic approach to clinical history taking.", icon: "🗣️", category: "Articles", path: "content/articles/history/index.html", date: "2024-05-22" },
-            { id: "alcohol-effect", name: "Alcohol Science", desc: "How to reduce physiological effects of alcohol.", icon: "🍷", category: "Articles", path: "content/articles/alcohol/index.html", date: "2024-05-21" },
-            { id: "grains-comp", name: "Rice vs Millet", desc: "Nutritional comparison of staple grains.", icon: "🌾", category: "Articles", path: "content/articles/grains/index.html", date: "2024-05-20" },
-            { id: "vit-d-study", name: "Vitamin D Levels", desc: "Study on sunlight exposure and D3 levels.", icon: "☀️", category: "Articles", path: "content/articles/vitamin-d/index.html", date: "2024-05-19" },
-            { id: "lap-chole", name: "Lap Chole Procedure", desc: "Surgical guide to Laparoscopic Cholecystectomy.", icon: "🔪", category: "Articles", path: "content/articles/surgery-guide/index.html", date: "2024-05-18" }
+            { id: "ors-use", name: "How to use ORS", desc: "Proper preparation and clinical use of Oral Rehydration.", icon: "🥤", category: "Articles", path: "content/articles/ors.html", date: "2024-05-25" },
+             { id: "alcohol-effect", name: "Alcohol Science", desc: "How to reduce physiological effects of alcohol.", icon: "🍷", category: "Articles", path: "content/articles/alcohol.html", date: "2024-05-21" },
+             { id: "vit-d-study", name: "Vitamin D Levels", desc: "Study on sunlight exposure and D3 levels.", icon: "☀️", category: "Articles", path: "content/articles/vitamin-d/index.html", date: "2024-05-19" },
+            { id: "lap-chole", name: "Lap Chole Procedure", desc: "Surgical guide to Laparoscopic Cholecystectomy.", icon: "🔪", category: "Articles", path: "content/articles/laparoscopic-cholecystectomy.html", date: "2024-05-18" }
+            { id: "1st-trimester", name: "1st Trimester Guide", desc: "First Trimester Management: The Clinical Gold Standard for Specialists", icon: "🤰", category: "Articles", path: "content/articles/pregnancy/1st.html", date: "2024-05-24" },
+            { id: "2nd-trimester", name: "2nd Trimester Guide", desc: "Second Trimester Management: Comprehensive Clinical Protocols for 14-28 Weeks", icon: "💻", category: "Articles", path: "content/articles/pregnancy/2nd.html", date: "2024-05-23" },
+            { id: "3rd-trimester", name: "3rd Trimester Guide", desc: "Third Trimester Management: Critical Surveillance and Intrapartum Optimization", icon: "🗣️", category: "Articles", path: "content/articles/pregnancy/3rd.html", date: "2024-05-22" },
+           
         ]
     }
 };
