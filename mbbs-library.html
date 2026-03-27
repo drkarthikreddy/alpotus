@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- POWERFUL SEO 5.0 -->
+    <title>MBBS Mastery Library | 19 Subjects High-Yield Clinical Notes | Alpotus</title>
+    <meta name="description" content="Access the complete 19-subject MBBS Library on Alpotus. Professional clinical notes for NEET PG, USMLE, and NEXT exams. Featuring Active Recall mode and Anki integration.">
+    <meta name="keywords" content="MBBS notes online, medical student library, anatomy high yield, pharmacology notes, pathology active recall, NEET PG study material, USMLE step 1 notes, Alpotus academic">
+    <link rel="canonical" href="https://www.alpotus.com/mbbs-library.html" />
+
+    <!-- JSON-LD STRUCTURED DATA (Collection Page) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Alpotus MBBS Mastery Library",
+      "description": "A comprehensive digital library for medical students covering all 19 MBBS subjects with interactive learning tools.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Alpotus",
+        "logo": "https://www.alpotus.com/assets/icons/icon-512.png"
+      }
+    }
+    </script>
+
+    <!-- ASSETS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="data/masterData.js"></script>
+    <script src="search-engine.js"></script>
+    <script src="app.js" defer></script>
+
+    <style>
+        /* VERSION 5.0 LIBRARY UI */
+        .library-hero {
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(250, 204, 21, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
+            border-radius: 0 0 40px 40px;
+            margin-bottom: 20px;
+        }
+
+        .library-hero h1 { font-size: 2.5rem; font-weight: 950; color: var(--text-main); }
+        .library-hero h1 span { color: var(--primary-dark); }
+        .library-hero p { color: var(--text-muted); font-size: 1rem; max-width: 600px; margin: 10px auto; }
+
+        /* Multi-Subject Grid */
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .subject-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 25px 15px;
+            border-radius: 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition-medium);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .subject-card:hover { 
+            border-color: var(--primary); 
+            transform: translateY(-5px); 
+            box-shadow: var(--shadow);
+        }
+
+        .sub-icon { font-size: 2.8rem; margin-bottom: 12px; transition: transform 0.3s ease; }
+        .subject-card:hover .sub-icon { transform: scale(1.15) rotate(5deg); }
+
+        .sub-name { font-weight: 800; font-size: 0.95rem; color: var(--text-main); line-height: 1.2; }
+        .sub-count { font-size: 0.65rem; color: var(--text-muted); font-weight: 900; text-transform: uppercase; margin-top: 8px; letter-spacing: 0.5px; }
+
+        /* Info Banner */
+        .pro-banner {
+            margin: 20px;
+            padding: 20px;
+            background: #000;
+            color: #fff;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .pro-banner i { font-size: 2rem; color: var(--primary); }
+        .pro-banner div h4 { color: var(--primary); margin-bottom: 2px; }
+        .pro-banner div p { font-size: 0.8rem; color: #ccc; }
+
+        @media (max-width: 600px) {
+            .library-hero h1 { font-size: 2rem; }
+            .subject-grid { grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px; }
+            .pro-banner { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <header class="library-hero">
+        <h1>MBBS <span>Library</span></h1>
+        <p>Comprehensive High-Yield notes for all 19 subjects. Integrated with Active Recall and Anki memory technology.</p>
+    </header>
+
+    <main class="main-content">
+        <!-- FEATURE ALERT -->
+        <section class="pro-banner">
+            <i>⚡</i>
+            <div>
+                <h4>Active Recall Enabled</h4>
+                <p>Click on highlighted terms within notes to test your clinical knowledge instantly.</p>
+            </div>
+        </section>
+
+        <!-- DYNAMIC SUBJECT GRID -->
+        <div class="subject-grid" id="subject-container">
+            <!-- JS will auto-render subjects from masterData.js -->
+        </div>
+
+        <!-- SEO TEXT BLOCK (Hidden for UI, Readable for Bots) -->
+        <article style="display:none;">
+            <h2>Study Medical Subjects Offline</h2>
+            <p>Alpotus provides a unified digital experience for medical students. Our library includes Anatomy, Physiology, Biochemistry, Pathology, Microbiology, Pharmacology, Forensic Medicine, Community Medicine, ENT, Ophthalmology, Medicine, Surgery, OBG, Pediatrics, Orthopedics, Dermatology, Psychiatry, Radiology, and Anesthesia.</p>
+        </article>
+    </main>
+
+    <script>
+        /**
+         * VERSION 5.0 SUBJECT RENDERER
+         * Dynamically builds the 19-subject grid from masterData.js
+         */
+        window.addEventListener('load', () => {
+            const container = document.getElementById('subject-container');
+            
+            // Safety check for data
+            if (typeof AlpotusData === 'undefined' || !AlpotusData.mbbs) {
+                container.innerHTML = `<p style="text-align:center; grid-column: 1/-1;">Error: MBBS Data not found in masterData.js</p>`;
+                return;
+            }
+
+            // Render subjects
+            container.innerHTML = AlpotusData.mbbs.items.map(sub => `
+                <div class="subject-card" onclick="window.location.href='${sub.path}'">
+                    <div class="sub-icon">${sub.icon}</div>
+                    <div class="sub-name">${sub.name}</div>
+                    <div class="sub-count">Explore Chapters →</div>
+                </div>
+            `).join('');
+        });
+    </script>
+
+</body>
+</html>
