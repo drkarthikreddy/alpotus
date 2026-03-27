@@ -1,7 +1,7 @@
 {
   "name": "Alpotus Digital Hub",
   "short_name": "Alpotus",
-  "start_url": "index.html?launcher=pwa",
+  "start_url": "index.html?",
   "display": "standalone",
   "background_color": "#facc15",
   "theme_color": "#facc15",
