@@ -142,10 +142,14 @@ document.addEventListener('DOMContentLoaded', initAlpotus);
 // Register Service Worker with Dynamic Prefix
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        // Points to the root sw.js regardless of current page depth
-        navigator.serviceWorker.register(prefix + 'sw.js')
-            .then(reg => console.log('Alpotus 5.0: Offline Core Active'))
-            .catch(err => console.error('Alpotus 5.0: SW Registration Failed', err));
+        // Using ./sw.js is the most reliable way for GitHub mobile browsers
+        navigator.serviceWorker.register('./sw.js')
+            .then(reg => {
+                console.log('PWA: Service Worker Registered Successfully');
+            })
+            .catch(err => {
+                console.error('PWA: Service Worker Registration Failed', err);
+            });
     });
 }
 
