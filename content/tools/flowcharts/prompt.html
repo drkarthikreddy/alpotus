@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Studio - Alpotus</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Base App Shell Styles --- */
+        :root {
+            --primary-color: #f59e0b; --primary-hover: #fbbf24;
+            --bg-color: #f8f9fa; --content-bg: #ffffff; --sidebar-bg: #111827;
+            --text-color: #111827; --text-secondary: #4b5563; --border-color: #e5e7eb;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.05); --sidebar-width: 260px;
+            --topbar-height: 60px; --border-radius: 12px;
+        }
+        body.dark-mode {
+            --bg-color: #121212; --content-bg: #1e1e1e; --sidebar-bg: #1e1e1e;
+            --text-color: #e5e5e5; --text-secondary: #888888; --border-color: #2e2e2e;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { height: 100%; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-color); color: var(--text-color); transition: background-color 0.3s, color 0.3s; overflow-x: hidden; display: flex; flex-direction: column; }
+        .sidebar { position: fixed; top: 0; left: 0; height: 100vh; width: var(--sidebar-width); background-color: var(--sidebar-bg); color: #e5e5e5; padding: 20px; display: flex; flex-direction: column; transform: translateX(-100%); transition: transform 0.3s ease-in-out; z-index: 1000; }
+        .sidebar.active { transform: translateX(0); }
+        .sidebar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+        .sidebar-logo { font-size: 1.5rem; font-weight: 600; }
+        #close-sidebar-btn { background: none; border: none; color: #9ca3af; font-size: 1.5rem; cursor: pointer; transition: color 0.2s; }
+        #close-sidebar-btn:hover { color: white; }
+        .sidebar-nav ul { list-style: none; }
+        .sidebar-nav li a { display: block; color: #d1d5db; text-decoration: none; padding: 15px; border-radius: 8px; font-weight: 500; transition: background-color 0.2s, color 0.2s; cursor: pointer; }
+        .sidebar-nav li a:hover { background-color: rgba(255, 255, 255, 0.1); color: white; }
+        .main-content { padding-top: var(--topbar-height); transition: margin-left 0.3s ease-in-out; flex-grow: 1; display: flex; flex-direction: column; }
+        body.sidebar-active .main-content { margin-left: var(--sidebar-width); }
+        .top-bar { position: fixed; top: 0; left: 0; right: 0; height: var(--topbar-height); background-color: var(--content-bg); border-bottom: 1px solid var(--border-color); display: flex; align-items: center; padding: 0 20px; z-index: 900; transition: background-color 0.3s, border-color 0.3s; box-shadow: var(--shadow); }
+        #menu-btn { background: none; border: none; cursor: pointer; padding: 5px; z-index: 2; }
+        #menu-btn svg { width: 24px; height: 24px; stroke: var(--text-color); }
+        .app-title { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 10px; font-size: 1.2rem; font-weight: 600; color: var(--text-color); }
+        .app-title svg { width: 28px; height: 28px; color: var(--primary-color); }
+        .page-container { padding: 30px; flex-grow: 1; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .page-subtitle { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 40px; max-width: 800px; }
+        .donate-footer { padding: 25px; text-align: center; background-color: var(--content-bg); border-top: 1px solid var(--border-color); transition: background-color 0.3s, border-color 0.3s; }
+        .donate-footer p { color: var(--text-secondary); margin-bottom: 15px; }
+        .btn { display: inline-block; padding: 10px 25px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.2s ease, background-color 0.2s ease; background-color: var(--primary-color); color: white; border: none; cursor: pointer; }
+        .btn:hover { background-color: var(--primary-hover); transform: translateY(-2px); }
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 999; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
+        .overlay.active { opacity: 1; visibility: visible; }
+
+        /* --- Page-Specific Styles --- */
+        .prompt-container {
+            background-color: var(--content-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        .prompt-step {
+            margin-bottom: 30px;
+        }
+        .prompt-step h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        #topic-input {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        #prompt-template {
+            background-color: var(--bg-color);
+            padding: 20px;
+            border-radius: 8px;
+            white-space: pre-wrap;
+            font-family: monospace;
+            border: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body class="light-mode">
+
+    <!-- App Shell: Sidebar, Top Bar -->
+    <aside class="sidebar" id="sidebar"> <div class="sidebar-header"><span class="sidebar-logo">Alpotus Menu</span><button id="close-sidebar-btn">&times;</button></div><nav class="sidebar-nav"><ul><li><a href="index.html">Back to Tools</a></li><li><a href="https://www.buymeacoffee.com/Alpotus" target="_blank">Rate Us</a></li><li><a href="https://www.buymeacoffee.com/Alpotus" target="_blank">Donate</a></li></ul></nav></aside>
+    <div class="main-content" id="main-content">
+        <header class="top-bar"><button id="menu-btn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg></button><div class="app-title"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" /></svg><span>Alpotus</span></div></header>
+
+        <!-- Tool Page Content -->
+        <main class="page-container" id="page-container">
+            <h1>AI Prompt Studio</h1>
+            <p class="page-subtitle">Generate a powerful, expert-level prompt to create complex flowcharts on any topic using an external AI.</p>
+            
+            <div class="prompt-container">
+                <div class="prompt-step">
+                    <h3>1. Enter Your Topic</h3>
+                    <input type="text" id="topic-input" placeholder="e.g., Renal Physiology & RAAS">
+                </div>
+                
+                <div class="prompt-step">
+                    <h3>2. The Expert Prompt Template</h3>
+                    <pre id="prompt-template"><code>You are an expert in creating **complex, error-free, ultra-detailed Mermaid flowcharts** for any medical, scientific, or technical topic. Your output must be **fully functional**, **ready-to-render**, and **never fail in any Mermaid parser**. 
+
+Follow these **strict conditions and optional enhancements**:
+
+1. **Input:** User provides only the topic name (e.g., "Renal Physiology", "Complement Cascade", "Drug Mechanism"). Use `<<USER_TOPIC>>` as placeholder.
+2. **Node IDs:** 
+   - All node IDs must be unique.  
+   - Use only letters, numbers, and underscores `_` in IDs.  
+   - Node labels (text) can contain spaces, arrows, Greek letters, or symbols.  
+   - For extremely long labels, allow them in quotes — they can wrap or be truncated if necessary for readability.
+3. **Subgraphs:** 
+   - Use subgraphs to logically group related nodes.  
+   - Nested subgraphs allowed up to 4–5 levels.  
+   - Nodes that will be referenced outside subgraphs must be **declared globally** to prevent parser errors.
+4. **Cross-subgraph links:** 
+   - Always point to globally declared nodes.  
+   - Never link directly to nodes deep inside another subgraph.  
+5. **Circular loops / feedback loops:** 
+   - Always use a **dedicated global node** (e.g., `FeedbackLoop`) to handle circular flows.  
+   - Label all feedback loops clearly.  
+6. **Standalone nodes:** 
+   - End all standalone node declarations with a semicolon `;`.  
+   - **Do not place comments on the same line** as a standalone node; place comments only on separate lines or after arrows.  
+7. **Comments:** 
+   - Use `%%` only on their own line or after an arrow/connection, never after a standalone node.  
+8. **Arrows / connections:** 
+   - `-->` for normal flow.  
+   - `-.->|label|` for feedback, modulation, or conditional influences.  
+   - Use `{}` for conditional/decision nodes.  
+9. **Outcome / terminal nodes:** 
+   - Collect all final effects, results, or endpoints in an `Outcome` subgraph.  
+   - If there is a circular system, feed it through the `FeedbackLoop` node.  
+10. **Stylistic clarity:**  
+    - Subgraph titles in quotes.  
+    - Node labels in quotes.  
+    - Keep all arrows clearly pointing to targets.  
+    - Consistent naming for repeated concepts.  
+11. **Optional enhancements for ultra robustness:**  
+    - Support for **very long labels** with wrapping or truncation if necessary.  
+    - Support for **special characters** (Greek letters, arrows, symbols) in node labels.  
+    - Optional **color coding or shapes**: rectangles for processes, diamonds for decisions, circles for modulatory nodes, to improve readability.  
+    - Include a **Legend** node explaining dotted arrows, conditional paths, or feedback loops.  
+    - Automatically handle **extremely large graphs** (50–100+ nodes) with nested subgraphs and multiple cross-links.  
+    - Include parallel, convergent, and branching pathways where logical.  
+12. **Error-free:**  
+    - All node IDs unique.  
+    - All links valid.  
+    - Semicolons at the end of standalone nodes.  
+    - No illegal characters in IDs.  
+    - All feedback and cross-links correctly referenced.  
+
+**Output requirements:**  
+- Full Mermaid code block starting with `graph TD;`.  
+- Main title node with the topic name.  
+- Input nodes (triggers, drugs, pathogens, nutrients, etc.).  
+- Logical subgraphs for grouped nodes.  
+- Feedback loops and circular flows handled via global nodes.  
+- Outcome subgraph collecting final endpoints.  
+- Cross-links correctly referenced via globally declared nodes.  
+- Optional Legend and stylistic elements.  
+
+**Example usage:**  
+User inputs: `"Renal Sodium-Water Regulation & RAAS"`  
+Output: Full, fully functional, ultra-complex Mermaid flowchart with all above rules applied, ready to render with no errors.
+
+Now, generate the **flowchart for the topic:** `<<USER_TOPIC>>`.
+</code></pre>
+                </div>
+
+                <div class="prompt-step">
+                    <h3>3. Copy Your Final Prompt</h3>
+                    <button id="copy-prompt-btn" class="btn">Copy Complete Prompt</button>
+                </div>
+            </div>
+        </main>
+
+        
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- App Shell Logic ---
+            const body = document.body;
+            const sidebar = document.getElementById('sidebar');
+            const menuBtn = document.getElementById('menu-btn');
+            const closeBtn = document.getElementById('close-sidebar-btn');
+            const overlay = document.getElementById('overlay');
+            const openSidebar = () => { sidebar.classList.add('active'); overlay.classList.add('active'); body.classList.add('sidebar-active'); };
+            const closeSidebar = () => { sidebar.classList.remove('active'); overlay.classList.remove('active'); body.classList.remove('sidebar-active'); };
+            menuBtn.addEventListener('click', openSidebar);
+            closeBtn.addEventListener('click', closeSidebar);
+            overlay.addEventListener('click', closeSidebar);
+            const applyTheme = (theme) => { body.classList.remove('light-mode', 'dark-mode'); body.classList.add(`${theme}-mode`); };
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            applyTheme(savedTheme || (systemPrefersDark ? 'dark' : 'light'));
+
+            // --- Prompt Page Logic ---
+            const copyPromptBtn = document.getElementById('copy-prompt-btn');
+            const promptTemplateEl = document.getElementById('prompt-template');
+            const topicInput = document.getElementById('topic-input');
+
+            copyPromptBtn.addEventListener('click', () => {
+                const userTopic = topicInput.value.trim();
+                const topicToInsert = userTopic === '' ? '<<USER_TOPIC>>' : userTopic;
+
+                // Create the final prompt by replacing the placeholder
+                const fullPrompt = promptTemplateEl.innerText.replace('<<USER_TOPIC>>', topicToInsert);
+                
+                // Use the robust copy method
+                const tempTextarea = document.createElement('textarea');
+                tempTextarea.value = fullPrompt;
+                document.body.appendChild(tempTextarea);
+                tempTextarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempTextarea);
+
+                copyPromptBtn.textContent = 'Copied!';
+                setTimeout(() => { copyPromptBtn.textContent = 'Copy Complete Prompt'; }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
+  
