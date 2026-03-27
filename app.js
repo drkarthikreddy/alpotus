@@ -157,20 +157,13 @@ window.addEventListener('beforeinstallprompt', (e) => {
 // Launch System on DOM Load
 document.addEventListener('DOMContentLoaded', initAlpotus);
 // --- FIXED FOR GITHUB PAGES ---
+// --- FIXED FOR GITHUB PAGES & CUSTOM DOMAINS ---
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        // Use './sw.js' instead of '/sw.js'
-        navigator.serviceWorker.register('./sw.js')
-            .then(reg => console.log('Alpotus 4.0: Offline Engine Active'))
-            .catch(err => console.error('Alpotus 4.0: Service Worker Failed', err));
-    });
-}
-
-// --- SERVICE WORKER REGISTRATION (Root Relative) ---
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-            .then(reg => console.log('Alpotus 4.0: Offline Engine Active'))
+        // We use the 'prefix' variable we calculated at the top of this file
+        // to make sure it finds sw.js regardless of folder depth or repo name.
+        navigator.serviceWorker.register(prefix + 'sw.js')
+            .then(reg => console.log('Alpotus 4.0: Service Worker Registered at: ' + reg.scope))
             .catch(err => console.error('Alpotus 4.0: Service Worker Failed', err));
     });
 }
