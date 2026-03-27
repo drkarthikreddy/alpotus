@@ -7,24 +7,25 @@ const CACHE_NAME = 'alpotus-v4.0-cache';
 
 // The "App Shell" - Core files required for the app to function offline
 const APP_SHELL = [
-    '/',
-    '/index.html',
-    '/clinical-scores.html',
-    '/quick-revision.html',
-    '/tools.html',
-    '/games.html',
-    '/calculators.html',
-    '/articles.html',
-    '/about.html',
-    '/privacy.html',
-    '/terms.html',
-    '/disclaimer.html',
-    '/style.css',
-    '/app.js',
-    '/search-engine.js',
-    '/manifest.json',
-    '/data/masterData.js' // The Brain of the app
-];
+    'index.html',
+    'mbbs-library.html',
+    'mbbs-explorer.html',
+    'clinical-scores.html',
+    'tools.html',
+    'games.html',
+    'calculators.html',
+    'articles.html',
+    'about.html',
+    'privacy.html',
+    'terms.html',
+    'disclaimer.html',
+    'settings.html',
+    'style.css',
+    'app.js',
+    'search-engine.js',
+    'manifest.json',
+    'data/masterData.js'
+]; // The Brain of the app
 
 // 1. INSTALL: Save the App Shell to the phone's storage
 self.addEventListener('install', (event) => {
