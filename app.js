@@ -156,6 +156,15 @@ window.addEventListener('beforeinstallprompt', (e) => {
 
 // Launch System on DOM Load
 document.addEventListener('DOMContentLoaded', initAlpotus);
+// --- FIXED FOR GITHUB PAGES ---
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        // Use './sw.js' instead of '/sw.js'
+        navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('Alpotus 4.0: Offline Engine Active'))
+            .catch(err => console.error('Alpotus 4.0: Service Worker Failed', err));
+    });
+}
 
 // --- SERVICE WORKER REGISTRATION (Root Relative) ---
 if ('serviceWorker' in navigator) {
