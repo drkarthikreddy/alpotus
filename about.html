@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- POWERFUL SEO 4.0 -->
+    <title>About Us | CEO Sukkannagari Karthik Reddy - Alpotus Digital Hub</title>
+    <meta name="description" content="Meet the visionary behind Alpotus. Sukkannagari Karthik Reddy is the CEO and founder of Alpotus, a premium platform dedicated to simplifying medical and web utilities.">
+    <meta name="keywords" content="Alpotus CEO, Sukkannagari Karthik Reddy, Alpotus founder, about Alpotus, medical tools mission, professional web utilities">
+    <link rel="canonical" href="https://www.alpotus.com/about.html" />
+
+    <!-- STRUCTURED DATA (Google E-E-A-T Optimization) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Sukkannagari Karthik Reddy",
+        "jobTitle": "CEO & Founder",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Alpotus",
+          "url": "https://www.alpotus.com"
+        },
+        "description": "Sukkannagari Karthik Reddy is the CEO and Founder of Alpotus, driving the future of simplified digital and medical utilities."
+      }
+    }
+    </script>
+
+    <!-- ASSETS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="data/masterData.js"></script>
+    <script src="search-engine.js"></script>
+    <script src="app.js" defer></script>
+
+    <style>
+        body { padding-top: 90px; }
+
+        .about-hero {
+            text-align: center;
+            padding: 60px 5%;
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* CEO Profile Image */
+        .ceo-profile {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid var(--primary);
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .ceo-name { font-size: 2rem; font-weight: 900; color: var(--text-main); margin-bottom: 5px; }
+        .ceo-title { font-size: 1rem; color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 2px; }
+
+        .content-section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 5%;
+            line-height: 1.8;
+            color: var(--text-muted);
+        }
+
+        .content-section h2 { 
+            font-size: 1.8rem; 
+            color: var(--text-main); 
+            margin-bottom: 20px; 
+            border-left: 5px solid var(--primary); 
+            padding-left: 15px;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .mission-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .mission-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .mission-card i { font-size: 2.5rem; display: block; margin-bottom: 15px; }
+
+        .cta-box {
+            background: var(--primary);
+            color: #000;
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            margin-top: 60px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CEO HERO -->
+    <header class="about-hero">
+        <img src="assets/images/ceo-karthik.png" alt="Sukkannagari Karthik Reddy - CEO of Alpotus" class="ceo-profile">
+        <h1 class="ceo-name">Sukkannagari Karthik Reddy</h1>
+        <div class="ceo-title">CEO & Founder</div>
+        <p style="max-width: 600px; margin: 15px auto 0 auto; color: var(--text-muted);">"Simplifying the digital world, one professional tool at a time."</p>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="content-section">
+        <h2>Our Vision</h2>
+        <p>Alpotus 4.0 was born out of a necessity for speed, accuracy, and accessibility. Led by <strong>Sukkannagari Karthik Reddy</strong>, our mission is to provide medical students, healthcare professionals, and web developers with high-performance utilities that work seamlessly across all devices, even offline.</p>
+
+        <p>We believe that complex clinical scores and advanced web tools shouldn't be hidden behind paywalls or slow interfaces. Alpotus is a commitment to the global community to keep digital resources fast, free, and professional.</p>
+
+        <div class="mission-grid">
+            <div class="mission-card">
+                <i>⚡</i>
+                <h3>Unmatched Speed</h3>
+                <p>Built with PWA technology to ensure instant loading and offline reliability.</p>
+            </div>
+            <div class="mission-card">
+                <i>🎯</i>
+                <h3>Accuracy First</h3>
+                <p>Every clinical score and calculator is rigorously tested against medical standards.</p>
+            </div>
+            <div class="mission-card">
+                <i>🔒</i>
+                <h3>Privacy Centric</h3>
+                <p>We process your data locally. Your privacy is our highest priority.</p>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <h2 style="border:none; padding:0; margin:0;">Experience Alpotus 4.0</h2>
+            <p style="margin: 10px 0 20px 0;">Join thousands of professionals using our digital hub daily.</p>
+            <button onclick="window.location.href='index.html'" style="background:#000; color:#fff; border:none; padding:15px 40px; border-radius:50px; font-weight:900; cursor:pointer;">Explore Tools →</button>
+        </div>
+    </main>
+
+    <script>
+        // Check if CEO data from masterData exists to verify loading
+        window.addEventListener('load', () => {
+            if(typeof AlpotusCEO !== 'undefined') {
+                console.log("CEO Profile Loaded: " + AlpotusCEO.name);
+            }
+        });
+    </script>
+
+</body>
+</html>

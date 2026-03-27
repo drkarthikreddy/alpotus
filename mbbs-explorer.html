@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- DYNAMIC SEO 4.0 -->
+    <title>MBBS Library | Alpotus Academic Hub</title>
+    <meta name="description" content="High-yield MBBS study notes with Active Recall and Anki integration. Master Pathology, Pharmacology, and Microbiology.">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="data/masterData.js"></script>
+    <script src="app.js" defer></script>
+
+    <style>
+        body { padding-top: 80px; transition: 0.3s; }
+        .explorer-container { max-width: 900px; margin: 0 auto; padding: 20px 5%; }
+
+        /* ACTIVE RECALL LOGIC */
+        mark {
+            background: var(--subject-color, #facc15);
+            color: transparent;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.2s;
+            padding: 0 4px;
+        }
+        body.recall-off mark { color: inherit; background: rgba(0,0,0,0.05); }
+        mark.revealed { color: inherit; background: transparent; border: 1px solid var(--subject-color); }
+
+        /* TYPOGRAPHY */
+        .reader-h1 { font-size: 2.8rem; font-weight: 900; margin-bottom: 10px; line-height: 1.1; color: var(--text-main); }
+        .reader-content { font-size: 1.2rem; line-height: 1.9; color: var(--text-main); margin-top: 30px; }
+        .reader-content h2 { margin-top: 40px; color: var(--subject-color); font-size: 1.8rem; }
+
+        /* FLOATING TOOLS */
+        .study-tools {
+            position: fixed; bottom: 90px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 1000;
+        }
+        .tool-fab {
+            width: 55px; height: 55px; border-radius: 50%; border: none; background: #000; color: #fff;
+            font-size: 1.5rem; cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center;
+        }
+        .tool-fab.active { background: var(--subject-color); color: #000; }
+
+        /* ANKI BANNER */
+        .anki-banner {
+            background: #f1f5f9; padding: 30px; border-radius: 20px; margin-top: 60px;
+            border: 2px dashed #cbd5e1; text-align: center;
+        }
+
+        /* NAVIGATION LISTS */
+        .bread-crumb { font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; color: var(--subject-color); margin-bottom: 20px; }
+        .list-item { 
+            background: var(--bg-card); padding: 20px; border-radius: 15px; margin-bottom: 12px; 
+            border: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;
+            cursor: pointer; font-weight: 700; transition: 0.3s;
+        }
+        .list-item:hover { border-color: var(--subject-color); transform: translateX(10px); }
+
+        /* SUBJECT THEMES */
+        body.theme-pathology { --subject-color: #ef4444; }
+        body.theme-pharmacology { --subject-color: #3b82f6; }
+        body.theme-microbiology { --subject-color: #8b5cf6; }
+
+    </style>
+</head>
+<body class="recall-on">
+
+    <div class="explorer-container" id="view-port">
+        <!-- JS INJECTS CONTENT HERE -->
+    </div>
+
+    <!-- FLOATING STUDY TOOLS (Only visible in Reader View) -->
+    <div class="study-tools" id="reader-tools" style="display:none">
+        <button class="tool-fab" id="recall-toggle" onclick="toggleRecall()" title="Toggle Active Recall">👁️</button>
+        <button class="tool-fab" onclick="exportToAnki()" title="Export to Anki">🗂️</button>
+    </div>
+
+    <script>
+        let currentSubject = "";
+        let currentChapter = "";
+        let currentTopic = "";
+        let subjectData = null;
+
+        async function initExplorer() {
+            const params = new URLSearchParams(window.location.search);
+            currentSubject = params.get('sub');
+            currentChapter = params.get('ch');
+            currentTopic = params.get('top');
+
+            if (!currentSubject) { window.location.href = "index.html"; return; }
+
+            // Set Theme
+            document.body.className = `theme-${currentSubject}`;
+
+            // Lazy Load Subject Data
+            try {
+                const script = document.createElement('script');
+                script.src = `data/mbbs/${currentSubject}.js`;
+                document.head.appendChild(script);
+                
+                script.onload = () => {
+                    renderView();
+                };
+            } catch (e) {
+                console.error("Subject not found");
+            }
+        }
+
+        function renderView() {
+            const view = document.getElementById('view-port');
+            const tools = document.getElementById('reader-tools');
+            
+            // 1. TOPIC READER VIEW
+            if (currentTopic) {
+                const topic = SubjectData.chapters[currentChapter].topics.find(t => t.id === currentTopic);
+                view.innerHTML = `
+                    <div class="bread-crumb">${currentSubject} > ${currentChapter.replace(/-/g, ' ')}</div>
+                    <h1 class="reader-h1">${topic.title}</h1>
+                    <div class="reader-content">${topic.content}</div>
+                    <div class="anki-banner">
+                        <h3>Build your Memory</h3>
+                        <p>Export these facts directly to the Alpotus Anki Tool.</p>
+                        <button class="btn" style="background:#000; color:#fff; margin-top:15px;" onclick="exportToAnki()">COPY ANKI PAIRS</button>
+                    </div>
+                `;
+                tools.style.display = "flex";
+                setupRecallInteraction();
+                // SEO Inject
+                document.title = `${topic.title} | Alpotus MBBS`;
+            } 
+            // 2. CHAPTER TOPIC LIST
+            else if (currentChapter) {
+                const chapter = SubjectData.chapters[currentChapter];
+                view.innerHTML = `
+                    <div class="bread-crumb">${currentSubject}</div>
+                    <h1 class="reader-h1">${chapter.title}</h1>
+                    <div style="margin-top:30px;">
+                        ${chapter.topics.map(t => `
+                            <div class="list-item" onclick="navigate('${currentSubject}', '${currentChapter}', '${t.id}')">
+                                ${t.title} <span>→</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+            // 3. SUBJECT CHAPTER LIST
+            else {
+                view.innerHTML = `
+                    <div class="bread-crumb">MBBS Library</div>
+                    <h1 class="reader-h1">${SubjectData.title}</h1>
+                    <div style="margin-top:30px;">
+                        ${Object.keys(SubjectData.chapters).map(chKey => `
+                            <div class="list-item" onclick="navigate('${currentSubject}', '${chKey}', '')">
+                                ${SubjectData.chapters[chKey].title} <span>→</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+        }
+
+        function navigate(sub, ch, top) {
+            let url = `mbbs-explorer.html?sub=${sub}`;
+            if (ch) url += `&ch=${ch}`;
+            if (top) url += `&top=${top}`;
+            window.location.href = url;
+        }
+
+        // FEATURE 1: ACTIVE RECALL
+        function toggleRecall() {
+            document.body.classList.toggle('recall-off');
+            document.getElementById('recall-toggle').classList.toggle('active');
+        }
+
+        function setupRecallInteraction() {
+            document.querySelectorAll('mark').forEach(m => {
+                m.onclick = () => m.classList.toggle('revealed');
+            });
+        }
+
+        // FEATURE 2: ANKI BRIDGE
+        function exportToAnki() {
+            const topic = SubjectData.chapters[currentChapter].topics.find(t => t.id === currentTopic);
+            if (!topic.ankiPairs) return;
+
+            const text = topic.ankiPairs.map(p => `Q=${p.q} A=${p.a}`).join('\n');
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Successfully copied cards to clipboard! Now paste them in the Flashcard Tool.");
+            });
+        }
+
+        window.onload = initExplorer;
+    </script>
+</body>
+</html>
