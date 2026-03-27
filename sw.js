@@ -28,7 +28,7 @@ const ASSETS_TO_CACHE = [
     './app.js',
     './search-engine.js',
     './manifest.json',
-    './data/masterData.js'
+    './data/masterdata.js'
 ];
 
 // 2. INSTALL EVENT
