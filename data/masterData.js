@@ -85,11 +85,10 @@ const AlpotusData = {
             { id: "ors-use", name: "How to use ORS", desc: "Proper preparation and clinical use of Oral Rehydration.", icon: "🥤", category: "Articles", path: "content/articles/ors.html", date: "2024-05-25" },
              { id: "alcohol-effect", name: "Alcohol Science", desc: "How to reduce physiological effects of alcohol.", icon: "🍷", category: "Articles", path: "content/articles/alcohol.html", date: "2024-05-21" },
              { id: "vit-d-study", name: "Vitamin D Levels", desc: "Study on sunlight exposure and D3 levels.", icon: "☀️", category: "Articles", path: "content/articles/vitamin-d/index.html", date: "2024-05-19" },
-            { id: "lap-chole", name: "Lap Chole Procedure", desc: "Surgical guide to Laparoscopic Cholecystectomy.", icon: "🔪", category: "Articles", path: "content/articles/laparoscopic-cholecystectomy.html", date: "2024-05-18" }
+            { id: "lap-chole", name: "Lap Chole Procedure", desc: "Surgical guide to Laparoscopic Cholecystectomy.", icon: "🔪", category: "Articles", path: "content/articles/laparoscopic-cholecystectomy.html", date: "2024-05-18" },
             { id: "1st-trimester", name: "1st Trimester Guide", desc: "First Trimester Management: The Clinical Gold Standard for Specialists", icon: "🤰", category: "Articles", path: "content/articles/pregnancy/1st.html", date: "2024-05-24" },
             { id: "2nd-trimester", name: "2nd Trimester Guide", desc: "Second Trimester Management: Comprehensive Clinical Protocols for 14-28 Weeks", icon: "💻", category: "Articles", path: "content/articles/pregnancy/2nd.html", date: "2024-05-23" },
-            { id: "3rd-trimester", name: "3rd Trimester Guide", desc: "Third Trimester Management: Critical Surveillance and Intrapartum Optimization", icon: "🗣️", category: "Articles", path: "content/articles/pregnancy/3rd.html", date: "2024-05-22" },
-           
+            { id: "3rd-trimester", name: "3rd Trimester Guide", desc: "Third Trimester Management: Critical Surveillance and Intrapartum Optimization", icon: "🗣️", category: "Articles", path: "content/articles/pregnancy/3rd.html", date: "2024-05-22" }
         ]
     }
 };
