@@ -110,34 +110,7 @@ body {
 /* -------------------------------------------------------------------------- */
 /* 6. PWA ONLY: BOTTOM NAVIGATION (Exact App Layout)                         */
 /* -------------------------------------------------------------------------- */
-#bottom-nav {
-    display: none; /* Hidden by default for Website */
-    position: fixed;
-    bottom: 0; left: 0; width: 100%;
-    height: 70px;
-    background: var(--bg-body);
-    border-top: 1px solid var(--border-color);
-    z-index: 1001;
-    grid-template-columns: repeat(4, 1fr);
-}
 
-.nav-tab {
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    color: var(--text-muted); font-size: 0.7rem; font-weight: 800;
-    text-decoration: none;
-}
-
-.nav-tab.active { color: var(--primary-hover); }
-.nav-tab i { font-size: 1.5rem; margin-bottom: 4px; }
-
-/* DETECT STANDALONE PWA MODE */
-@media (display-mode: standalone) {
-    :root { --bottom-nav-height: 70px; }
-    #bottom-nav { display: grid; }
-    footer { display: none !important; } /* No Footer in PWA */
-    #sidebar { display: none !important; } /* Settings is a Page in PWA */
-}
 
 /* -------------------------------------------------------------------------- */
 /* 7. CARDS & GRID                                                           */
