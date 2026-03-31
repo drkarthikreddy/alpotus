@@ -84,15 +84,15 @@ const AlpotusData = {
         title: "Interactive Games",
         icon: "🎮",
         items: [
-            { id: "triad-game", name: "Medical Triads", desc: "Master clinical triads in an interactive game.", icon: "🔺", category: "Games", path: "content/games/triads/index.html", date: "2024-05-25", tags: ["quiz"], status: "stable" },
-
-            { id: "pharma-class", name: "Pharma Classification", desc: "Drug class matching and recall challenge.", icon: "💊", category: "Games", path: "content/games/pharma-class/index.html", date: "2024-05-24", tags: ["pharma"], status: "stable" },
-
-            { id: "drug-ind", name: "Drug Indications", desc: "Identify therapeutic uses of major drugs.", icon: "✅", category: "Games", path: "content/games/shared/drug-indications.html", date: "2024-05-23", tags: ["drugs"], status: "stable" },
-
-            { id: "drug-contra", name: "Contraindications", desc: "Learn when NOT to prescribe specific drugs.", icon: "❌", category: "Games", path: "content/games/shared/drug-contraindications.html", date: "2024-05-22", tags: ["safety"], status: "stable" }
+            { id: "triad-game", name: "Medical Triads", desc: "Master clinical triads in an interactive game.", icon: "🔺", category: "Games", path: "content/games/triadgame/index.html", date: "2024-05-25" },
+            { id: "pharma-class", name: "Pharma Classification", desc: "Drug class matching and recall challenge.", icon: "💊", category: "Games", path: "content/games/pharmacology-classification/index.html", date: "2024-05-24" },
+           
+            { id: "pharma-hub", name: "PharmaMaster Pro", desc: "Learn all about  drugs.", icon: "💊", category: "Games", path: "content/games/ICA/index.html", date: "2024-05-22" },
+            { id: "medical-challenge", name: "Medical Chalanges", desc: "There are many conceps waiting for you", icon: "⚕️", category: "Games", path: "content/games/medical-challenge/index.html", date: "2024-05-22" }
+            
         ]
     },
+    
 
     // 5. MBBS LIBRARY
     "mbbs": {
