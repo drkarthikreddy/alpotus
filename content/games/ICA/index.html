@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmaMaster Pro v3.1 | Ultimate Suite</title>
+    
+    <!-- Link the Professional CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Professional Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Hub Specific Premium Cards */
+        .hub-header { text-align: center; margin-bottom: 40px; }
+        .hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+        
+        .hub-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 40px 25px;
+            border-radius: 24px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .hub-card:hover {
+            transform: translateY(-10px);
+            background: white;
+            box-shadow: 0 20px 30px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .hub-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            width: 90px; height: 90px;
+            background: #f1f5f9;
+            display: flex;
+            align-items: center; justify-content: center;
+            border-radius: 50%;
+        }
+
+        .hub-card h3 { font-weight: 900; color: #1e293b; margin-bottom: 10px; }
+        .hub-card p { font-size: 0.85rem; color: #64748b; line-height: 1.5; }
+        
+        .version-tag {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.75rem;
+            color: #94a3b8;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="game-container">
+            
+            <!-- MAIN HUB INTERFACE -->
+            <div class="card">
+                <div class="hub-header">
+                    <span class="version-tag">Version 3.1 Stable</span>
+                    <h1>PharmaMaster Pro</h1>
+                    <p style="color: #64748b; font-weight: 500;">Professional Clinical Learning and Assessment Suite</p>
+                </div>
+
+                <div class="hub-grid">
+                    <!-- INDICATIONS -->
+                    <div class="hub-card" onclick="initGame('indications', '#10b981')">
+                        <div class="hub-icon">💊</div>
+                        <h3>Indications</h3>
+                        <p>Master primary clinical uses and therapeutic logic.</p>
+                    </div>
+
+                    <!-- SIDE EFFECTS -->
+                    <div class="hub-card" onclick="initGame('side_effects', '#ef4444')">
+                        <div class="hub-icon">⚠️</div>
+                        <h3>Side Effects</h3>
+                        <p>Recognize drug toxicities and adverse reactions.</p>
+                    </div>
+
+                    <!-- CONTRAINDICATIONS -->
+                    <div class="hub-card" onclick="initGame('contraindications', '#f59e0b')">
+                        <div class="hub-icon">🚫</div>
+                        <h3>Contraindications</h3>
+                        <p>Identify restrictions and high-risk safety protocols.</p>
+                    </div>
+
+                    <!-- CLINICAL SCENARIOS -->
+                    <div class="hub-card" onclick="initGame('scenario', '#2563eb')">
+                        <div class="hub-icon">🏥</div>
+                        <h3>ER Scenarios</h3>
+                        <p>Apply drug knowledge to diagnostic patient cases.</p>
+                    </div>
+                </div>
+
+                <div class="footer-note">Clinical Pharmacology Analysis Engine</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CORE FILES -->
+    <script src="pharmacologyData.js"></script>
+    <script src="gameEngine.js"></script>
+
+</body>
+</html>
