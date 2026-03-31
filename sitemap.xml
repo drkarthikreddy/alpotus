@@ -6,38 +6,206 @@
   </url>
   <url>
     <loc>https://www.alpotus.com/tools.html</loc>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.alpotus.com/games.html</loc>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/clinical-scores.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/quick-revision.html</loc>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.alpotus.com/calculators.html</loc>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.alpotus.com/articles.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.alpotus.com/template.html?id=ppt-generator&amp;cat=tools</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.alpotus.com/template.html?id=Pharmacology-Classification-Game&amp;cat=games</loc>
+    <loc>https://www.alpotus.com/about.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.alpotus.com/template.html?id=bmi-calculator&amp;cat=calcs</loc>
+    <loc>https://www.alpotus.com/privacy.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.alpotus.com/template.html?id=web-trends-2025&amp;cat=arts</loc>
+    <loc>https://www.alpotus.com/terms.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.alpotus.com/template.html?id=vitamin-d-study&amp;cat=arts</loc>
+    <loc>https://www.alpotus.com/disclaimer.html</loc>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/settings.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/tools/ppt/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/tools/flashcard/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/tools/notes/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/tools/img-converter/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/tools/invoice-generator/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/tools/habit-tracker/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/tools/img-resizer/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/tools/prescription/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/tools/flowcharts/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/calculators/bmi/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/calculators/age/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/calculators/water/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/calculators/full body/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/calculators/ovulation/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/calculators/pregnancy/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/calculators/creatinine/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/calculators/anion-gap/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/calculators/iv-drip/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/calculators/bsa/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/scores/gcs/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/scores/apgar/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/scores/child-pugh/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/scores/meld/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/scores/curb65/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/scores/sofa/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/scores/vasc/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/games/triadgame/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/games/pharmacology-classification/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/games/ICA/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/games/medical-challenge/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/mbbs-explorer.html?sub=pathology</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/mbbs-explorer.html?sub=microbiology</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/mbbs-explorer.html?sub=pharmacology</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/articles/ors.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/articles/alcohol.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/articles/vitd-vs-sunlight</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/articles/laparoscopic-cholecystectomy.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/articles/pregnancy/1st.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/articles/pregnancy/2nd.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.alpotus.com/content/articles/pregnancy/3rd.html</loc>
+    <priority>0.7</priority>
   </url>
 </urlset>
