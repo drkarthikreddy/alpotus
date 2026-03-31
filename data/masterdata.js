@@ -23,7 +23,7 @@ const AlpotusData = {
 
             { id: "habit-track", name: "Habit Tracker", desc: "Visual progress tracker for healthy lifestyle habits.", icon: "📅", category: "Tools", path: "content/tools/habit-tracker/index.html", date: "2024-05-20", tags: ["habit","tracker"], status: "stable" },
 
-            { id: "image-resizer", name: "Image Resizer", desc: "Compress and resize images for research papers.", icon: "🖼️", category: "Tools", path: "content/tools/image-resizer/index.html", date: "2024-05-19", tags: ["image","resize"], status: "stable" },
+            { id: "image-resizer", name: "Image Resizer", desc: "Compress and resize images for research papers.", icon: "🖼️", category: "Tools", path: "content/tools/img-resizer/index.html", date: "2024-05-19", tags: ["image","resize"], status: "stable" },
 
             { id: "prescription", name: "Prescription Generator", desc: "Generate online prescriptions easily.", icon: "💊", category: "Tools", path: "content/tools/prescription/index.html", date: "2024-05-18", tags: ["prescription","medical"], status: "stable" },
 
@@ -42,7 +42,7 @@ const AlpotusData = {
 
             { id: "water-intake", name: "Water Intake Calculator", desc: "Daily hydration requirement based on weight.", icon: "💧", category: "Calculators", path: "content/calculators/water/index.html", date: "2024-05-23", tags: ["water","hydration"], status: "stable" },
 
-            { id: "full-body-anthro", name: "Anthro Analyzer", desc: "Full body anthropometry & muscle symmetry.", icon: "🧍", category: "Calculators", path: "content/calculators/full-body/index.html", date: "2024-05-22", tags: ["anthropometry"], status: "stable" },
+            { id: "full-body-anthro", name: "Anthro Analyzer", desc: "Full body anthropometry & muscle symmetry.", icon: "🧍", category: "Calculators", path: "content/calculators/full body/index.html", date: "2024-05-22", tags: ["anthropometry"], status: "stable" },
 
             { id: "ovulation", name: "Ovulation Tracker", desc: "Calculate most fertile days and ovulation cycle.", icon: "🥚", category: "Calculators", path: "content/calculators/ovulation/index.html", date: "2024-05-20", tags: ["fertility"], status: "stable" },
 
@@ -116,7 +116,7 @@ const AlpotusData = {
 
             { id: "alcohol-effect", name: "Alcohol Science", desc: "How to reduce physiological effects of alcohol.", icon: "🍷", category: "Articles", path: "content/articles/alcohol.html", date: "2024-05-21", tags: ["alcohol"], status: "stable" },
 
-            { id: "vit-d-study", name: "Vitamin D Levels", desc: "Study on sunlight exposure and D3 levels.", icon: "☀️", category: "Articles", path: "content/articles/vitamin-d/index.html", date: "2024-05-19", tags: ["vitamin-d"], status: "stable" },
+            { id: "vit-d-study", name: "Vitamin D Levels", desc: "Study on sunlight exposure and D3 levels.", icon: "☀️", category: "Articles", path: "content/articles/vitd-vs-sunlight", date: "2024-05-19", tags: ["vitamin-d"], status: "stable" },
 
             { id: "lap-chole", name: "Lap Chole Procedure", desc: "Surgical guide to laparoscopic cholecystectomy.", icon: "🔪", category: "Articles", path: "content/articles/laparoscopic-cholecystectomy.html", date: "2024-05-18", tags: ["surgery"], status: "stable" },
 
