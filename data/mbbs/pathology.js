@@ -1,6 +1,298 @@
 const RawInput = `
 // PASTE YOUR PEPTIC ULCER DATA HERE (Exactly as you wrote it)
 
+CHAPTER: Hematopathology
+
+TOPIC_ID: acute-myeloid-leukemia
+
+TOPIC_TITLE: Acute Myeloid Leukemia
+
+CONTENT:
+<b>Definition</b>
+
+<mark>Acute Myeloid Leukemia</mark> is a malignant neoplasm arising from hematopoietic progenitor cells. It is characterized by unregulated clonal proliferation of immature myeloid cells called <mark>myeloblasts</mark>, which accumulate in the bone marrow and replace normal marrow elements, leading to marrow failure.
+
+<b>Risk Factors and Genetics</b>
+
+- Acquired chromosomal abnormalities:
+  - <mark>t(8;21)</mark>
+  - <mark>inv(16)</mark>
+  - <mark>t(15;17)</mark>
+
+TABLE:
+| Chromosomal Abnormality | Associated AML Type | Prognosis |
+| <mark>t(8;21)</mark> | AML with maturation | Favorable |
+| <mark>inv(16)</mark> | Myelomonocytic AML with eosinophilia | Favorable |
+| <mark>t(15;17)</mark> | <mark>Acute Promyelocytic Leukemia</mark> | Very favorable with treatment |
+
+- Point mutations commonly involve:
+  - <mark>FLT3</mark>
+  - <mark>RAS</mark>
+  - <mark>RUNX1</mark>
+
+- Mutations in epigenetic regulators:
+  - <mark>IDH1</mark>
+  - <mark>IDH2</mark>
+  - <mark>DNMT3A</mark>
+
+- <mark>TP53</mark> mutation is associated with complex karyotype and very poor prognosis
+
+FLOWCHART:
+Acquired mutation
+-> <mark>FLT3</mark> or <mark>RAS</mark> mutation
+-> Increased cell proliferation
+-> Expansion of myeloid blasts
+-> Acute Myeloid Leukemia
+
+- Inherited syndromes associated with AML:
+  - <mark>Down syndrome</mark>
+  - <mark>Fanconi anemia</mark>
+  - <mark>Bloom syndrome</mark>
+  - <mark>Ataxia-telangiectasia</mark>
+
+- Environmental risk factors:
+  - <mark>Benzene</mark> exposure
+  - Cigarette smoking
+  - Ionizing radiation
+  - Prior chemotherapy with alkylating agents
+  - Prior therapy with topoisomerase II inhibitors
+
+<b>Pathogenesis</b>
+
+Initial genetic damage occurs in a hematopoietic stem cell or myeloid progenitor.
+
+FLOWCHART:
+Genetic damage in hematopoietic stem cell
+-> Mutation in transcription factor
+-> Block in myeloid maturation
+-> Mutation in signaling pathway
+-> Increased proliferation and survival
+-> Clonal expansion of <mark>myeloblasts</mark>
+-> Replacement of normal bone marrow
+-> <mark>Pancytopenia</mark>
+
+- Maturation block may occur due to transcription factor mutations such as <mark>PML-RARα</mark> in <mark>Acute Promyelocytic Leukemia</mark>
+
+FLOWCHART:
+<mark>t(15;17)</mark>
+-> Formation of <mark>PML-RARα</mark>
+-> Block in promyelocyte differentiation
+-> Accumulation of abnormal promyelocytes
+-> <mark>Acute Promyelocytic Leukemia</mark>
+
+- Increased proliferation is driven by signaling mutations such as <mark>FLT3</mark>
+
+<b>Laboratory Diagnosis</b>
+
+<b>Complete Blood Picture</b>
+
+- RBC count is decreased causing <mark>Anemia</mark>
+- WBC count is variable:
+  - Increased in <mark>Hyperleukocytosis</mark>
+  - Normal
+  - Decreased in <mark>Aleukemic leukemia</mark>
+- Platelet count is decreased causing <mark>Thrombocytopenia</mark>
+
+TABLE:
+| Blood Parameter | Finding in AML |
+| RBC Count | Decreased |
+| WBC Count | Increased, normal or decreased |
+| Platelet Count | Decreased |
+
+<b>RBC Indices</b>
+
+- <mark>MCV</mark>, <mark>MCH</mark> and <mark>MCHC</mark> are usually normal
+- Produces normocytic normochromic anemia
+- <mark>RDW</mark> may be increased if AML develops from pre-existing MDS
+
+<b>Special Tests</b>
+
+- Iron studies may show increased storage iron in marrow macrophages
+- Biochemical assays:
+  - Increased <mark>Uric Acid</mark>
+  - Increased <mark>LDH</mark>
+
+FLOWCHART:
+Rapid blast turnover
+-> Increased cell destruction
+-> Increased <mark>Uric Acid</mark>
+-> Increased <mark>LDH</mark>
+
+- Cytochemical stains:
+  - <mark>Myeloperoxidase</mark> positive in myeloblasts
+  - <mark>Nonspecific Esterase</mark> positive in monoblasts
+
+TABLE:
+| Cytochemical Stain | Positive Cell Type |
+| <mark>Myeloperoxidase</mark> | Myeloblast |
+| <mark>Nonspecific Esterase</mark> | Monoblast |
+
+- Chest X-ray may be used to evaluate pneumonia or mediastinal mass
+
+<b>Peripheral Smear</b>
+
+- Stained with Wright or Giemsa stain
+- Shows large <mark>myeloblasts</mark> with delicate chromatin and 2-4 nucleoli
+- Presence of <mark>Auer rods</mark> is pathognomonic
+
+FLOWCHART:
+Peripheral smear
+-> Presence of <mark>Myeloblasts</mark>
+-> Detection of <mark>Auer rods</mark>
+-> Diagnosis of AML
+
+<b>Bone Marrow Aspirate</b>
+
+- Bone marrow is usually hypercellular
+- Diagnosis requires at least <mark>20%</mark> myeloid blasts in marrow
+
+<b>Flow Cytometry</b>
+
+- Stem cell markers:
+  - <mark>CD34</mark>
+  - <mark>CD117</mark>
+
+- Myeloid markers:
+  - <mark>CD33</mark>
+  - <mark>CD13</mark>
+  - <mark>CD15</mark>
+
+- Monocytic markers:
+  - <mark>CD14</mark>
+  - <mark>CD64</mark>
+
+TABLE:
+| Marker Type | CD Markers |
+| Stem Cell Marker | <mark>CD34</mark>, <mark>CD117</mark> |
+| Myeloid Marker | <mark>CD33</mark>, <mark>CD13</mark>, <mark>CD15</mark> |
+| Monocytic Marker | <mark>CD14</mark>, <mark>CD64</mark> |
+
+- Bone marrow biopsy is useful for assessing cellularity and marrow fibrosis
+- <mark>FISH</mark> is used to detect:
+  - <mark>t(8;21)</mark>
+  - <mark>t(15;17)</mark>
+  - <mark>inv(16)</mark>
+
+- Immunohistochemistry markers:
+  - <mark>MPO</mark>
+  - <mark>CD68</mark>
+
+<b>Coagulation Studies</b>
+
+- <mark>BT</mark>, <mark>PT</mark> and <mark>aPTT</mark> may be prolonged
+- Especially important in <mark>Acute Promyelocytic Leukemia</mark>
+- <mark>DIC</mark> is a common complication of <mark>M3 AML</mark>
+
+FLOWCHART:
+<mark>Acute Promyelocytic Leukemia</mark>
+-> Release of procoagulant substances
+-> <mark>DIC</mark>
+-> Prolonged <mark>PT</mark> and <mark>aPTT</mark>
+-> Severe bleeding
+
+<b>Clinical Features</b>
+
+- Features of marrow failure:
+  - Fatigue and pallor due to <mark>Anemia</mark>
+  - Fever and infections due to <mark>Neutropenia</mark>
+  - Petechiae and bleeding due to <mark>Thrombocytopenia</mark>
+
+- Tissue infiltration:
+  - <mark>Gum hypertrophy</mark>
+  - <mark>Leukemia cutis</mark>
+  - <mark>Chloroma</mark> or <mark>Myeloid Sarcoma</mark>
+
+FLOWCHART:
+Blast infiltration into tissues
+-> Gingiva
+-> <mark>Gum hypertrophy</mark>
+
+Blast infiltration into skin
+-> <mark>Leukemia cutis</mark>
+
+Blast accumulation in soft tissue
+-> <mark>Chloroma</mark>
+
+- Emergency complications:
+  - <mark>Hyperleukocytosis</mark>
+  - <mark>Leukostasis</mark>
+  - <mark>Tumor Lysis Syndrome</mark>
+
+FLOWCHART:
+Very high WBC count
+-> <mark>Hyperleukocytosis</mark>
+-> Sludging of blasts in vessels
+-> <mark>Leukostasis</mark>
+-> Stroke or respiratory distress
+
+<b>Treatment</b>
+
+- Standard induction chemotherapy uses the <mark>7+3 regimen</mark>
+- This includes:
+  - <mark>Cytarabine</mark> for 7 days
+  - <mark>Daunorubicin</mark> for 3 days
+
+FLOWCHART:
+AML treatment
+-> <mark>7+3 regimen</mark>
+-> Remission induction
+-> Consolidation therapy
+-> Possible stem cell transplantation
+
+- <mark>All-trans-retinoic acid</mark> and <mark>Arsenic trioxide</mark> are used for <mark>Acute Promyelocytic Leukemia</mark>
+
+FLOWCHART:
+<mark>ATRA</mark>
+-> Binds abnormal <mark>PML-RARα</mark>
+-> Promyelocyte differentiation resumes
+-> Remission in <mark>APL</mark>
+
+- Hematopoietic stem cell transplantation is recommended in high-risk or relapsed AML
+
+<b>Prognosis</b>
+
+- Overall 5-year disease-free survival is approximately <mark>15-30%</mark>
+- Very favorable prognosis:
+  - <mark>Acute Promyelocytic Leukemia</mark>
+  - <mark>t(15;17)</mark>
+  - Cure rate greater than <mark>90%</mark>
+
+- Poor prognostic factors:
+  - Age greater than <mark>60 years</mark>
+  - Therapy-related AML
+  - <mark>TP53</mark> mutation
+
+ANKI:
+Q: What is the minimum percentage of marrow blasts required to diagnose AML? | A: At least <mark>20%</mark>
+
+Q: Which cytoplasmic inclusion is pathognomonic of AML? | A: <mark>Auer rods</mark>
+
+Q: Which stain is positive in myeloblasts? | A: <mark>Myeloperoxidase</mark>
+
+Q: Which translocation is seen in Acute Promyelocytic Leukemia? | A: <mark>t(15;17)</mark>
+
+Q: Which fusion protein is produced in Acute Promyelocytic Leukemia? | A: <mark>PML-RARα</mark>
+
+Q: Which AML subtype commonly causes DIC? | A: <mark>Acute Promyelocytic Leukemia</mark>
+
+Q: What is the standard induction regimen for AML? | A: <mark>7+3 regimen</mark> with <mark>Cytarabine</mark> and <mark>Daunorubicin</mark>
+
+Q: Which drug is specifically used in Acute Promyelocytic Leukemia? | A: <mark>All-trans-retinoic acid</mark>
+
+Q: Which marker is a stem cell marker in AML? | A: <mark>CD34</mark>
+
+Q: Which mutation is associated with very poor prognosis in AML? | A: <mark>TP53</mark>
+
+NOTES:
+- Always remember <mark>Auer rods</mark> are pathognomonic for AML
+- <mark>M3 AML</mark> or <mark>Acute Promyelocytic Leukemia</mark> is associated with <mark>DIC</mark>
+- <mark>t(15;17)</mark> has the best prognosis due to response to <mark>ATRA</mark>
+- <mark>Myeloperoxidase</mark> positivity helps differentiate AML from ALL
+- <mark>20%</mark> marrow blasts are required for diagnosis
+
+---
+
+
 
 CHAPTER: Hematopathology
 
