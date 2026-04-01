@@ -2,6 +2,251 @@ const RawInput = `
 // PASTE YOUR PEPTIC ULCER DATA HERE (Exactly as you wrote it)
 
 
+CHAPTER: Hematopathology
+
+TOPIC_ID: acute-lymphoblastic-leukemia
+
+TOPIC_TITLE: Acute Lymphoblastic Leukemia
+
+CONTENT:
+<b>Definition</b>
+
+<mark>Acute Lymphoblastic Leukemia</mark> is a highly aggressive malignant neoplasm composed of immature B cells or T cells called <mark>lymphoblasts</mark>. It is characterized by uncontrolled proliferation of these abnormal cells causing disruption of normal bone marrow function and resulting in marrow failure.
+
+<b>Epidemiology</b>
+
+- <mark>ALL</mark> is the most common cancer in children
+- Accounts for approximately <mark>75%</mark> of newly diagnosed pediatric acute leukemias
+- <mark>B-ALL</mark> peaks at about <mark>3 years of age</mark>
+- <mark>T-ALL</mark> peaks during adolescence
+- Slight male predominance
+- Approximately <mark>80-85%</mark> of cases are <mark>B-ALL</mark>
+- Approximately <mark>15%</mark> of cases are <mark>T-ALL</mark>
+
+TABLE:
+| Feature | B-ALL | T-ALL |
+| Most common age | Around 3 years | Adolescence |
+| Frequency | 80-85% | 15% |
+| Common markers | <mark>CD19</mark>, <mark>CD10</mark>, <mark>PAX5</mark> | <mark>CD1</mark>, <mark>CD2</mark>, <mark>CD5</mark>, <mark>CD7</mark> |
+| Common presentation | Bone marrow failure | <mark>Mediastinal thymic mass</mark> |
+
+<b>Morphologic Classification</b>
+
+- <mark>L1</mark>
+  - 80-85% of cases
+  - Small homogeneous cells
+- <mark>L2</mark>
+  - 15% of cases
+  - Larger heterogeneous cells
+- <mark>L3</mark>
+  - 1-2% of cases
+  - Large cells with prominent vacuoles
+
+TABLE:
+| FAB Type | Morphology |
+| <mark>L1</mark> | Small homogeneous cells |
+| <mark>L2</mark> | Large heterogeneous cells |
+| <mark>L3</mark> | Large vacuolated cells |
+
+<b>Pathogenesis</b>
+
+<mark>ALL</mark> is caused by genetic mutations that block normal lymphocyte differentiation and increase self-renewal.
+
+FLOWCHART:
+Genetic mutation
+-> Block in lymphoid differentiation
+-> Increased proliferation of lymphoblasts
+-> Replacement of normal bone marrow
+-> Marrow failure
+-> <mark>Anemia</mark>
+-> <mark>Neutropenia</mark>
+-> <mark>Thrombocytopenia</mark>
+
+- In <mark>T-ALL</mark>, 50-70% of cases have gain-of-function mutations in <mark>NOTCH1</mark>
+
+FLOWCHART:
+<mark>T-ALL</mark>
+-> Mutation in <mark>NOTCH1</mark>
+-> Increased immature T-cell proliferation
+-> <mark>Mediastinal thymic mass</mark>
+-> Airway and vessel compression
+-> Respiratory distress or <mark>Superior vena cava syndrome</mark>
+
+- In <mark>B-ALL</mark>, mutations commonly involve:
+  - <mark>PAX5</mark>
+  - <mark>ETV6</mark>
+  - <mark>RUNX1</mark>
+
+- <mark>t(9;22)</mark> translocation produces the <mark>BCR-ABL1</mark> fusion gene
+- This is known as the <mark>Philadelphia chromosome</mark>
+- Presence of <mark>Philadelphia chromosome</mark> indicates high-risk disease
+
+FLOWCHART:
+<mark>Philadelphia chromosome</mark>
+-> <mark>t(9;22)</mark>
+-> Formation of <mark>BCR-ABL1</mark>
+-> Increased tyrosine kinase activity
+-> High-risk ALL
+
+- <mark>Hyperdiploidy</mark> with more than <mark>50 chromosomes</mark> is associated with good prognosis
+- <mark>Hypodiploidy</mark> with less than <mark>44 chromosomes</mark> is associated with poor prognosis
+
+TABLE:
+| Cytogenetic Change | Finding | Prognosis |
+| <mark>Hyperdiploidy</mark> | More than 50 chromosomes | Good |
+| <mark>Hypodiploidy</mark> | Less than 44 chromosomes | Poor |
+| <mark>Philadelphia chromosome</mark> | <mark>t(9;22)</mark> with <mark>BCR-ABL1</mark> | Very poor |
+
+<b>Morphology</b>
+
+- Lymphoblasts have scant basophilic cytoplasm
+- Nuclei are larger than normal lymphocytes
+- Chromatin is delicate and finely stippled
+- Small nucleoli are present
+- Rapidly growing tumors may show a <mark>starry sky appearance</mark> due to macrophages engulfing apoptotic tumor cells
+
+<b>Immunophenotype</b>
+
+- More than <mark>95%</mark> of cases express <mark>TdT</mark>
+
+- <mark>B-ALL</mark> cells express:
+  - <mark>CD19</mark>
+  - <mark>PAX5</mark>
+  - <mark>CD10</mark>
+
+- <mark>T-ALL</mark> cells express:
+  - <mark>CD1</mark>
+  - <mark>CD2</mark>
+  - <mark>CD5</mark>
+  - <mark>CD7</mark>
+
+<b>Clinical Features</b>
+
+- Marrow failure causes:
+  - Fatigue due to <mark>Anemia</mark>
+  - Fever and infections due to <mark>Neutropenia</mark>
+  - Petechiae and bleeding due to <mark>Thrombocytopenia</mark>
+
+- Infiltration causes:
+  - <mark>Lymphadenopathy</mark>
+  - <mark>Splenomegaly</mark>
+  - <mark>Hepatomegaly</mark>
+
+- <mark>T-ALL</mark> often presents with a <mark>Mediastinal thymic mass</mark>
+- This can cause:
+  - Respiratory distress
+  - <mark>Superior vena cava syndrome</mark>
+
+- Bone pain and joint pain occur due to marrow expansion
+
+- Sanctuary site involvement:
+  - <mark>CNS</mark>
+    - Headache
+    - Vomiting
+    - Cranial nerve palsies
+  - <mark>Testis</mark>
+    - Firm painless swelling
+
+<b>Diagnosis</b>
+
+- Bone marrow diagnosis is established when lymphoblasts form more than <mark>25%</mark> of marrow cells
+- Some patients have <mark>Hyperleukocytosis</mark> with WBC greater than <mark>100000/mm³</mark>
+- Some patients have <mark>Aleukemic leukemia</mark> with absent blasts in blood
+- <mark>CSF analysis</mark> is required to detect CNS involvement
+
+<b>Treatment</b>
+
+FLOWCHART:
+Treatment of ALL
+-> Induction therapy
+-> CNS preventive therapy
+-> Intensification
+-> Maintenance therapy
+-> Long-term remission
+
+- Induction therapy uses:
+  - <mark>Vincristine</mark>
+  - <mark>Prednisolone</mark>
+  - <mark>L-asparaginase</mark>
+  - Anthracyclines
+
+- CNS prophylaxis uses:
+  - <mark>Methotrexate</mark>
+  - <mark>Hydrocortisone</mark>
+  - <mark>Cytarabine</mark>
+
+- Maintenance therapy for 2-2.5 years uses:
+  - <mark>6-mercaptopurine</mark>
+  - Weekly <mark>Methotrexate</mark>
+
+- <mark>Imatinib</mark> is used in <mark>Philadelphia chromosome</mark> positive ALL
+
+TABLE:
+| Drug Phase | Main Drugs |
+| Induction therapy | <mark>Vincristine</mark>, <mark>Prednisolone</mark>, <mark>L-asparaginase</mark>, Anthracyclines |
+| CNS prophylaxis | <mark>Methotrexate</mark>, <mark>Hydrocortisone</mark>, <mark>Cytarabine</mark> |
+| Maintenance therapy | <mark>6-mercaptopurine</mark>, <mark>Methotrexate</mark> |
+| Targeted therapy | <mark>Imatinib</mark> |
+
+<b>Prognosis</b>
+
+- Cure rate in children is more than <mark>80%</mark>
+
+- Favorable factors:
+  - Age 2-10 years
+  - WBC less than <mark>50000</mark>
+  - <mark>Hyperdiploidy</mark>
+  - Rapid response to induction
+
+- Unfavorable factors:
+  - Age less than 1 year or more than 10 years
+  - High WBC count
+  - <mark>Hypodiploidy</mark>
+  - Persistent <mark>Minimal Residual Disease</mark>
+
+<b>Special Considerations</b>
+
+- <mark>Down syndrome</mark> increases the risk of ALL by 15-20 fold
+- Long-term complications include:
+  - Cognitive impairment
+  - Short stature
+  - Cardiotoxicity from anthracyclines
+  - Secondary malignancies such as AML
+
+ANKI:
+Q: What is the most common cancer in children? | A: <mark>Acute Lymphoblastic Leukemia</mark>
+
+Q: Which type of ALL is more common? | A: <mark>B-ALL</mark>
+
+Q: Which mutation is commonly seen in T-ALL? | A: <mark>NOTCH1</mark>
+
+Q: Which translocation forms the Philadelphia chromosome? | A: <mark>t(9;22)</mark>
+
+Q: Which fusion gene is formed in Philadelphia chromosome-positive ALL? | A: <mark>BCR-ABL1</mark>
+
+Q: Which marker is positive in more than 95% of ALL cases? | A: <mark>TdT</mark>
+
+Q: Which ALL commonly presents with a mediastinal mass? | A: <mark>T-ALL</mark>
+
+Q: What percentage of marrow blasts is required to diagnose ALL? | A: More than <mark>25%</mark>
+
+Q: Which cytogenetic abnormality has a favorable prognosis? | A: <mark>Hyperdiploidy</mark>
+
+Q: Which drug is specifically used in Philadelphia chromosome-positive ALL? | A: <mark>Imatinib</mark>
+
+NOTES:
+- Keep flowcharts immediately below the related concept
+- <mark>TdT</mark> is the most important common marker of ALL
+- <mark>T-ALL</mark> is associated with a <mark>Mediastinal thymic mass</mark>
+- <mark>Philadelphia chromosome</mark> carries poor prognosis
+- <mark>Hyperdiploidy</mark> is favorable and <mark>Hypodiploidy</mark> is unfavorable
+
+---
+
+
+
+
+
 CHAPTER: Gastrointestinal Pathology
 
 TOPIC_ID: peptic-ulcer
