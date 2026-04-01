@@ -9,7 +9,7 @@
     <meta name="description" content="High-yield MBBS study notes with Active Recall and Anki integration. Master Pathology, Pharmacology, and Microbiology.">
     
     <link rel="stylesheet" href="style.css">
-    <script src="data/masterdata.js"></script>
+    <script src="data/masterData.js"></script>
     <script src="app.js" defer></script>
 
     <style>
@@ -62,6 +62,55 @@
         body.theme-pathology { --subject-color: #ef4444; }
         body.theme-pharmacology { --subject-color: #3b82f6; }
         body.theme-microbiology { --subject-color: #8b5cf6; }
+        /* This makes sure every <br> creates a nice clean gap */
+br {
+    content: "";
+    margin: 0.5em 0;
+    display: block;
+}
+/* --- TABLE STYLING --- */
+.path-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-family: sans-serif;
+    background: white;
+}
+.path-table th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+.path-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.path-table tr:nth-child(even) { background-color: #fafafa; }
+
+/* --- FLOWCHART STYLING --- */
+.flow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+.flow-step {
+    background: #eef2ff;
+    border: 2px solid #6366f1;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 150px;
+    position: relative;
+}
+.flow-arrow {
+    font-size: 20px;
+    color: #6366f1;
+}
 
     </style>
 </head>
